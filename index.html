@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC01 - Alunos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cadastro</h1>
+
+    <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome">
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade">
+
+        <label for="matricula">Matrícula:</label>
+        <input type="text" id="matricula" name="matricula">
+
+        <label for="curso">Curso:</label>
+        <input type="text" id="curso" name="curso">
+
+        <label for="notaFinal">Nota Final:</label>
+        <input type="number" id="notaFinal" name="notaFinal" step="0.01" min="0" max="10">
+
+        <button type="button" class="btn-cadastrar" onclick="adicionarDados()">Cadastrar</button>
+    </form>
+
+    <div class="opcoes">
+        <button onclick="listarAlunosAprovados()">Alunos Aprovados</button>
+        <button onclick="calcularMediaNotas()">Media Total</button>
+        <button onclick="calcularMediaIdades()">Media Idades</button>
+        <button onclick="listarAlunos()">Lista De Alunos</button>
+        <button onclick="listarAlunosporCurso()">Alunos por Curso</button>
+    </div>
+
+    <table id="minhaTabela">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Matrícula</th>
+                <th>Curso</th>
+                <th>Nota Final</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
