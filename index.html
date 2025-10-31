@@ -7,33 +7,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Cadastro</h1>
 
-    <form>
+    <h1>Cadastro de Alunos</h1>
+
+    <form id="formCadastro">
+
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome">
+        <input type="text" id="nome" name="nome" required>
 
         <label for="idade">Idade:</label>
-        <input type="number" id="idade" name="idade">
+        <input type="number" id="idade" name="idade" min="1" required>
 
         <label for="matricula">Matrícula:</label>
-        <input type="text" id="matricula" name="matricula">
+        <input type="text" id="matricula" name="matricula" required>
 
         <label for="curso">Curso:</label>
-        <input type="text" id="curso" name="curso">
+        <input type="text" id="curso" name="curso" required>
 
-        <label for="notaFinal">Nota Final:</label>
-        <input type="number" id="notaFinal" name="notaFinal" step="0.01" min="0" max="10">
+        <label for="notaFinal">Nota Final (0–10):</label>
+        <input type="number" id="notaFinal" name="notaFinal" step="0.01" min="0" max="10" required>
 
-        <button type="button" class="btn-cadastrar" onclick="adicionarDados()">Cadastrar</button>
+        <button type="button" class="btn-cadastrar" onclick="adicionarDados()">
+            Cadastrar
+        </button>
     </form>
 
     <div class="opcoes">
-        <button onclick="listarAlunosAprovados()">Alunos Aprovados</button>
-        <button onclick="calcularMediaNotas()">Media Total</button>
-        <button onclick="calcularMediaIdades()">Media Idades</button>
-        <button onclick="listarAlunos()">Lista De Alunos</button>
-        <button onclick="listarAlunosporCurso()">Alunos por Curso</button>
+        <button onclick="listarAlunosAprovados()">Aprovados</button>
+        <button onclick="calcularMediaNotas()">Média Notas</button>
+        <button onclick="calcularMediaIdades()">Média Idades</button>
+        <button onclick="listarAlunos()">Lista Completa</button>
+        <button onclick="listarAlunosporCurso()">Por Curso</button>
     </div>
 
     <table id="minhaTabela">
@@ -47,10 +51,9 @@
                 <th>Ações</th>
             </tr>
         </thead>
-        <tbody>
-        </tbody>
+        <tbody></tbody>
     </table>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

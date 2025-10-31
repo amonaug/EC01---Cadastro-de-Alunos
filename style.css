@@ -1,85 +1,115 @@
-*{
-    font-family: Arial;;
+* {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
-form {
-    margin: 20px;
-    padding: 30px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-
-.btn-cadastrar {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    display: block;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100px;
-}
-
-.btn-cadastrar:hover {
-    background-color: #45a049;
+body {
+    background-color: #f2f5f4;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
     text-align: center;
-    color: #333;
+    color: #2e473b;
+    margin-top: 25px;
 }
+
+form {
+    width: 90%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border: 1px solid #d9e2de;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.07);
+}
+
+label {
+    font-weight: bold;
+    color: #2e473b;
+    display: block;
+    margin-top: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b8c8c1;
+    border-radius: 6px;
+    margin-top: 5px;
+    background-color: #f7faf9;
+}
+
+/* Botão cadastrar */
+.btn-cadastrar {
+    display: block;
+    width: 130px;
+    margin: 25px auto 0;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2fa66b;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-cadastrar:hover {
+    background-color: #278d5b;
+}
+
+.opcoes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.opcoes button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2fa66b;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.opcoes button:hover {
+    background-color: #278d5b;
+}
+
 
 table {
     width: 90%;
-    margin: 0 auto;
+    margin: 20px auto;
     border-collapse: collapse;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #d9e2de;
+    border-radius: 6px;
     overflow: hidden;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.07);
 }
 
 th, td {
-    border: 1px solid #ddd;
-    padding: 10px 15px;
+    padding: 12px;
     text-align: center;
 }
 
 th {
-    background-color: #007bff;
+    background-color: #2fa66b;
     color: white;
     font-weight: bold;
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #f2f7f5;
 }
 
 tr:hover {
-    background-color: #d8e7ff;
-}
-
-.opcoes {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    padding: 30px;    
-}
-
-.opcoes button {
-    margin: 0 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-}
-
-.opcoes button:hover {
-    background-color: #0056b3;
+    background-color: #d9f3e5;
 }
